@@ -4,7 +4,7 @@ import XlsxPopulate from "xlsx-populate";
 XlsxPopulate.fromBlankAsync().then(workbook => {
   const sheet = workbook.sheet("Sheet1");
   sheet.cell("A1").value("Hello, World!");
-  return workbook.toFileAsync("./write_promises.xlsx");
+  return workbook.toFileAsync("./writePromises.xlsx");
 });
 
 
@@ -13,7 +13,7 @@ async function main() {
   const workbook = await XlsxPopulate.fromBlankAsync();
   const sheet = workbook.sheet("Sheet1");
   sheet.cell("A1").value("Hello, World!");
-  workbook.toFileAsync("./write_async_await.xlsx");
+  workbook.toFileAsync("./writeAsyncAwait.xlsx");
 }
 
 main();
